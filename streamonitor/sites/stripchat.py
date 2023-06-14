@@ -7,9 +7,7 @@ class StripChat(Bot):
     siteslug = 'SC'
 
     def getVideoUrl(self):
-        return self.getWantedResolutionPlaylist("https://b-{server}.{host}/hls/{id}/master/{id}.m3u8".format(
-                server=self.lastInfo["cam"]["viewServers"]["flashphoner-hls"],
-                host='doppiocdn.com',
+        return self.getWantedResolutionPlaylist("https://edge-hls.doppiocdn.com/hls/{id}/master/{id}_auto.m3u8".format(
                 id=self.lastInfo["cam"]["streamName"]
             ))
 
